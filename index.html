@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Threes</title><meta http-equiv="refresh" content="1;url=en/index.html">
+<script>
+var langs=['en', 'ko', 'ja', 'zh-Hans', 'zh-Hant', 'vi', 'es', 'pt-BR', 'th', 'id'];var want=(navigator.languages||[navigator.language||'en']).map(function(l){return l.toLowerCase()});
+var pick='en';outer:for(var i=0;i<want.length;i++){var w=want[i];
+ if(w.indexOf('zh')===0){pick=(w.indexOf('hant')>-1||w.indexOf('tw')>-1||w.indexOf('hk')>-1||w.indexOf('mo')>-1)?'zh-Hant':'zh-Hans';break}
+ if(w.indexOf('pt')===0){pick='pt-BR';break}
+ for(var j=0;j<langs.length;j++){if(w===langs[j].toLowerCase()||w.split('-')[0]===langs[j].toLowerCase()){pick=langs[j];break outer}}}
+location.replace(pick+'/index.html');
+</script></head><body><a href="en/index.html">Threes</a></body></html>
